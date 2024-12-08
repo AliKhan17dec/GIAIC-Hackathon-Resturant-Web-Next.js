@@ -32,7 +32,7 @@ const Hero10 = () => {
     ].map((blog, index) => (
       <div
         key={index}
-        className="bg-black text-white border-[1px] border-white overflow-hidden shadow-lg max-md:mx-[80px]"
+        className="bg-black text-white border-[1px] border-white overflow-hidden shadow-lg md:mx-[80px]"
       >
         {/* Image */}
         <img
