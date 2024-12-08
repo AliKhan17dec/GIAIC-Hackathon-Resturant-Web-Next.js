@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; // Make sure the CSS with the background is loaded here
+import Navbar from "@/components/header";
+import Footer from "@/components/footer"; // Uncomment Footer if you plan to include it
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      <body className={`${inter.className} page-background bg-black`}>
+        {/* Background overlay div */}
+        <div className="background-overlay"></div>
+
+
+        <Navbar />
+        <div>{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
+
