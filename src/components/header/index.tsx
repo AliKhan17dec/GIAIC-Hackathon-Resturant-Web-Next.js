@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex justify-center">
       <div className="bg-black md:w-[1320px] px-4 md:px-12 py-4 mt-[25px] max-md:mt-0">
-        <div className="items-center justify-between max-w-[1320px] mx-auto">
+        <div className="items-center justify-between max-w-[1320px] mx-auto ">
           {/* Logo Section */}
           <div className="flex items-center text-[24px] font-bold justify-center">
             <span className="text-[#FF9F0D]">Food</span>
@@ -28,19 +29,19 @@ const Navbar = () => {
               <a href="#" className="hover:text-yellow-500">
                 Home
               </a>
-              <a href="#" className="hover:text-yellow-500">
+              <Link href="../menu" className="hover:text-yellow-500">
                 Menu
-              </a>
-              <a href="#" className="hover:text-yellow-500">
+              </Link>
+              <Link href="../blog" className="hover:text-yellow-500">
                 Blog
-              </a>
+              </Link>
               <a href="#" className="hover:text-yellow-500">
                 Pages
               </a>
               <a href="#" className="hover:text-yellow-500">
                 About
               </a>
-              <a href="#" className="hover:text-yellow-500">
+              <a href="../products" className="hover:text-yellow-500">
                 Shop
               </a>
               <a href="#" className="hover:text-yellow-500">
@@ -62,10 +63,12 @@ const Navbar = () => {
                 />
               </div>
 
+              <Link href="../shoppingcard">
               <HiOutlineShoppingBag
                 size={20}
                 className="text-white hover:text-[#FF9F0D]"
               />
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}

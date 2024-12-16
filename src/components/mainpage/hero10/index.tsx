@@ -1,8 +1,10 @@
+import Footer from '@/components/footer'
 import React from 'react'
 
 const Hero10 = () => {
   return (
-    <section className="bg-black text-white py-16 px-10 md:px-36">
+    <div>
+      <section className="bg-black text-white py-16 px-10 md:px-36">
   {/* Heading */}
   <div className="text-center mb-12">
     <h5 className="text-orange-500 text-xl font-medium">Blog Post</h5>
@@ -32,7 +34,7 @@ const Hero10 = () => {
     ].map((blog, index) => (
       <div
         key={index}
-        className="bg-black text-white border-[1px] border-white overflow-hidden shadow-lg md:mx-[80px]"
+        className="bg-black text-white border-[1px] border-white items-center shadow-lg md:mx-[0px] w-full "
       >
         {/* Image */}
         <img
@@ -66,6 +68,10 @@ const Hero10 = () => {
     ))}
   </div>
 </section>
+<div>
+  <Footer />
+</div>
+    </div>
 
   )
 }

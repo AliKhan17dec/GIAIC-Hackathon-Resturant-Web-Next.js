@@ -12,7 +12,7 @@ import Hero10 from "@/components/mainpage/hero10";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-black">
      <Hero1 />
      <Hero2 />
      <Hero3 />
@@ -23,6 +23,6 @@ export default function Home() {
      <Hero8 />
      <Hero9 />
      <Hero10 />
-    </>
+    </div>
   );
 }

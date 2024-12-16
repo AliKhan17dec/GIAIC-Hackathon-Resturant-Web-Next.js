@@ -19,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className={`${inter.className} page-background bg-black`}>
+      <body className={`${inter.className} page-background`}>
         {/* Background overlay div */}
         <div className="background-overlay"></div>
 
 
-        <Navbar />
+        {/* <Navbar /> */}
         <div>{children}</div>
         <Footer />
       </body>
