@@ -38,12 +38,12 @@ const Navbar = () => {
               <a href="#" className="hover:text-yellow-500">
                 Pages
               </a>
-              <a href="#" className="hover:text-yellow-500">
+              <Link href="../aboutus" className="hover:text-yellow-500">
                 About
-              </a>
-              <a href="../products" className="hover:text-yellow-500">
-                Shop
-              </a>
+              </Link>
+              <Link href="../productcard" className="hover:text-[#FF9F0D]">
+              Shop
+            </Link>
               <a href="#" className="hover:text-yellow-500">
                 Contact
               </a>
@@ -69,6 +69,7 @@ const Navbar = () => {
                 className="text-white hover:text-[#FF9F0D]"
               />
               </Link>
+              
             </div>
 
             {/* Mobile Menu Button */}

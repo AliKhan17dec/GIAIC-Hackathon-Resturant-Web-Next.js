@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Hero7 = () => {
   return (
@@ -39,9 +40,11 @@ const Hero7 = () => {
 
   {/* See More Button */}
   <div className="flex justify-center mt-12">
+    <Link href="../chefs">
     <button className="bg-transparent border-2 border-[#FF9F0D] text-white px-6 py-2 rounded-3xl hover:bg-[#FF9F0D] hover:text-white transition duration-300">
       See More
     </button>
+    </Link>
   </div>
 </section>
 

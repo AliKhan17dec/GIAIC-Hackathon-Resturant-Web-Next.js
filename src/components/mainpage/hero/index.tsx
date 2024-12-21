@@ -1,5 +1,6 @@
 import Navbar from '@/components/header';
 import React from 'react';
+import Link from 'next/link';
 import { FaFacebookF, FaTwitter, FaPinterest } from "react-icons/fa";
 
 const Hero1 = () => {
@@ -41,9 +42,11 @@ const Hero1 = () => {
               pharetra dictum neque massa congue.
             </p>
             <div className="text-center md:text-left">
+              <Link href="../menu">
               <button className="bg-[#FF9F0D] text-white px-6 py-3 rounded-full hover:bg-orange-600">
                 See Menu
               </button>
+              </Link>
             </div>
           </div>
         </div>

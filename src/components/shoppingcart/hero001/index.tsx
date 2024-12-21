@@ -1,4 +1,6 @@
 'use client'
+import CheckoutPage from '@/components/checkoutpage/checkouthero1';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 interface CartItem {
@@ -97,9 +99,11 @@ const CartSection: React.FC = () => {
             <span>Total Amount</span>
             <span>${calculateTotal()}</span>
           </div>
+          <Link href="../checkoutpage">
           <button className="mt-4 bg-[#FF9F0D] text-white py-2 w-full rounded hover:bg-orange-600">
             Proceed to Checkout
           </button>
+          </Link>
         </div>
       </div>
     </div>

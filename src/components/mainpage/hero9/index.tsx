@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaPlay } from 'react-icons/fa'
 
 const Hero9 = () => {
   return (
@@ -37,16 +38,10 @@ const Hero9 = () => {
         Read More
       </button>
       <div className='flex justify-center items-center gap-2'>
-      <button className="flexitems-center space-x-2 bg-[#FF9F0D] hover:bg-transparent border-[1px] border-[#FF9F0D] text-white px-6 py-2 rounded-full w-[50px] h-[50px] font-semibold shadow-lg transition duration-300 items-center justify-center">
-      {/* <svg
-            className="w-10 h-10 fill-current text-white "
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path d="M8 5v14l11-7z" />
-          </svg> */}
-        </button>
-        <span>Play Video</span>
+      <button className="flex items-center w-[50px] h-[50px] bg-[#FF9F0D] rounded-full hover:bg-orange-600 gap-2 justify-center">
+            <FaPlay className="text-xl text-white" />
+            
+          </button>
           
       </div>
     </div>

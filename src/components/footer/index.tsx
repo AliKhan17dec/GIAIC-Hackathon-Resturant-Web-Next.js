@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest } from "react-icons/fa";
 import Image from 'next/image';
 import clockwiseimg from '../../../public/recentpostimages/ClockClockwise.png'
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -75,7 +76,7 @@ const Footer = () => {
           <div>
           <h3 className="text-lg font-bold">Help?</h3>
           <ul className="mt-4 text-white space-y-2">
-            <li>FAQ</li>
+          <li><Link href='../faqs'>FAQs</Link></li>
             <li>Terms & Conditions</li>
             <li>Reporting</li>
             <li>Documentation</li>

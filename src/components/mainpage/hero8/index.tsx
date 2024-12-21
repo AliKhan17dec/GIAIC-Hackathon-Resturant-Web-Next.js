@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header8 = () => {
   return (
-    <section className="bg-black text-white py-16">
+    <section className=" text-white py-16">
   <div className="container mx-auto">
     {/* Section Heading */}
     <div className="text-center mb-8">

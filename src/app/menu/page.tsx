@@ -15,7 +15,12 @@ const indext = () => {
   return (
     <div>
       <Navbar />
-      <Hero1 />
+      <Hero1 
+       heading="Our Menu"
+       menuLink="#menu"  // Ensure this is passed as a string
+       menuText="Home"
+       menuText2='Menu'
+      />
       <Hero02 />
       <Hero03 />
       <Hero5 />
