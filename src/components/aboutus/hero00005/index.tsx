@@ -1,4 +1,5 @@
 'use client'
+import Link from "next/link";
 import React, { useState } from "react";
 
 
@@ -101,9 +102,11 @@ const FoodMenu = () => {
 
       {/* View Menu Button */}
       <div className="text-center mt-12">
+        <Link href="../productcard">
         <button className="px-6 py-3 border-[1px] border-[#FF9F0D] text-[#FF9F0D] hover:text-white  hover:bg-[#FF9F0D] transition duration-300">
           View Menu
         </button>
+        </Link>
       </div>
     </section>
   );

@@ -30,83 +30,88 @@ const CartSection: React.FC = () => {
   };
 
   return (
-    <div className="container sm:mx-0 lg:mx-10 lg:p-6">
-      <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse">
-          <thead>
-            <tr className="border-b">
-              <th className="p-2">Product</th>
-              <th className="p-2">Price</th>
-              <th className="p-2">Quantity</th>
-              <th className="p-2">Total</th>
-              <th className="p-2">Remove</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cartItems.map(item => (
-              <tr key={item.id} className="border-b">
-                <td className="p-2 flex items-center gap-4">
-                  <img src={item.image} alt={item.name} className="w-20 h-20 object-cover" />
-                  {item.name}
-                </td>
-                <td className="p-2">${item.price}</td>
-                <td className="p-2">
-                  <div className="flex items-center">
-                    <button className="px-2 border" onClick={() => {}}> - </button>
-                    <span className="px-4">{item.quantity}</span>
-                    <button className="px-2 border" onClick={() => {}}> + </button>
-                  </div>
-                </td>
-                <td className="p-2">${item.total}</td>
-                <td className="p-2">
-                  <button
-                    onClick={() => handleRemove(item.id)}
-                    className="text-red-500 hover:text-red-700"
-                  >
-                    X
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="container mx-auto px-4 lg:px-10 py-6">
+  {/* Table Section */}
+  <div className="overflow-x-auto">
+    <table className="min-w-max w-full text-left border-collapse">
+      <thead>
+        <tr className="border-b">
+          <th className="p-2">Product</th>
+          <th className="p-2">Price</th>
+          <th className="p-2">Quantity</th>
+          <th className="p-2">Total</th>
+          <th className="p-2">Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cartItems.map((item) => (
+          <tr key={item.id} className="border-b">
+            <td className="p-2 flex items-center gap-4">
+              <img src={item.image} alt={item.name} className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded" />
+              <span className="truncate">{item.name}</span>
+            </td>
+            <td className="p-2">${item.price}</td>
+            <td className="p-2">
+              <div className="flex items-center">
+                <button className="px-2 border" onClick={() => {}}> - </button>
+                <span className="px-4">{item.quantity}</span>
+                <button className="px-2 border" onClick={() => {}}> + </button>
+              </div>
+            </td>
+            <td className="p-2">${item.total}</td>
+            <td className="p-2">
+              <button
+                onClick={() => handleRemove(item.id)}
+                className="text-red-500 hover:text-red-700"
+              >
+                X
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
 
-      {/* Coupon Code & Summary */}
-      <div className="mt-6 flex justify-between flex-col md:flex-row gap-6">
-        <div className="w-full md:w-1/2">
-          <h3 className="font-semibold mb-2">Coupon Code</h3>
-          <input
-            type="text"
-            placeholder="Enter Here Code"
-            className="border w-full p-2 rounded"
-          />
-          <button className="mt-2 bg-[#FF9F0D] text-white py-2 px-4 rounded hover:bg-orange-600">
-            Apply
-          </button>
-        </div>
-        <div className="w-full md:w-1/3 md:mx-14">
-          <h3 className="font-semibold mb-2">Total Bill</h3>
-          <div className="flex justify-between">
-            <span>Cart Subtotal</span>
-            <span>${calculateTotal()}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className='text-[#4F4F4F]'>Shipping Charge</span>
-            <span>$0.00</span>
-          </div>
-          <div className="border-t mt-2 pt-2 flex justify-between font-semibold">
-            <span>Total Amount</span>
-            <span>${calculateTotal()}</span>
-          </div>
-          <Link href="../checkoutpage">
-          <button className="mt-4 bg-[#FF9F0D] text-white py-2 w-full rounded hover:bg-orange-600">
-            Proceed to Checkout
-          </button>
-          </Link>
-        </div>
-      </div>
+  {/* Coupon Code & Summary Section */}
+  <div className="mt-8 flex flex-col md:flex-row gap-6">
+    {/* Coupon Code */}
+    <div className="w-full md:w-1/2">
+      <h3 className="font-semibold mb-2">Coupon Code</h3>
+      <input
+        type="text"
+        placeholder="Enter Here Code"
+        className="border w-full p-2 rounded"
+      />
+      <button className="mt-2 bg-[#FF9F0D] text-white py-2 px-4 rounded hover:bg-orange-600">
+        Apply
+      </button>
     </div>
+
+    {/* Total Bill Summary */}
+    <div className="w-full md:w-1/3 md:mx-14">
+      <h3 className="font-semibold mb-2">Total Bill</h3>
+      <div className="flex justify-between">
+        <span>Cart Subtotal</span>
+        <span>${calculateTotal()}</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="text-[#4F4F4F]">Shipping Charge</span>
+        <span>$0.00</span>
+      </div>
+      <div className="border-t mt-2 pt-2 flex justify-between font-semibold">
+        <span>Total Amount</span>
+        <span>${calculateTotal()}</span>
+      </div>
+      <Link href="../checkoutpage">
+        <button className="mt-4 bg-[#FF9F0D] text-white py-2 w-full rounded hover:bg-orange-600">
+          Proceed to Checkout
+        </button>
+      </Link>
+    </div>
+  </div>
+</div>
+
   );
 };
 

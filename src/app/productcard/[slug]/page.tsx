@@ -17,7 +17,12 @@ import { AiFillInstagram } from "react-icons/ai";
 const products = [
   { id: 1, name: "Fresh Lime", price: "$38.00", oldPrice: "$45.00", image: "/shopcardspictures/unsplash_ZuIDLSz3XLg.png", tag: "" },
   { id: 2, name: "Chocolate Muffin", price: "$28.00", oldPrice: "", image: "/shopcardspictures/Mask Group (3).png", tag: "" },
-  // Add remaining products here
+  { id: 3, name: "Burger", price: "$21.00", oldPrice: "$45.00", image: "/shopcardspictures/Mask Group (4).png", tag: "" },
+  { id: 4, name: "Country Burger", price: "$45.00", oldPrice: "", image: "/shopcardspictures/unsplash_9G_oJBKwi1c.png", tag: "" },
+  { id: 5, name: "Drink", price: "$32.00", oldPrice: "", image: "/shopcardspictures/unsplash_akwA-GPF710 (1).png", tag: "" },
+  { id: 6, name: "Pizza", price: "$43.00", oldPrice: "", image: "/shopcardspictures/unsplash_Oxb84ENcFfU.png", tag: "" },
+  { id: 7, name: "Pizza", price: "$43.00", oldPrice: "", image: "/shopcardspictures/Mask Group.png", tag: "" },
+  
 ];
 
 const ProductPage = ({ params }: { params: { slug: string } }) => {
