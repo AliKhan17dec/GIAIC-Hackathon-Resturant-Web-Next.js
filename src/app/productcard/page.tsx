@@ -6,7 +6,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <Navbar />
+    <Navbar />  
       <Hero1
       heading="Our Menu"
       menuLink=""  // Ensure this is passed as a string
