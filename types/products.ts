@@ -18,4 +18,5 @@ export interface Product {
         _type : "slug"
         current : string;
     }
+    category : string;
 }
