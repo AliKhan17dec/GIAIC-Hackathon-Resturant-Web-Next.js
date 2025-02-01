@@ -1,0 +1,7 @@
+Test Case Id,Test Case Description,Test Steps,Expected Result,Actual Result,Status,Severity Level,Assigned to,Remarks
+TC001,Validiate Product Listing Page,Open Product Page > Verify Products,Product Display Correctly,Product Display Correctly,Passed,High,,No Issue Found
+TC002,Ensure Responsiveness on Every Screen ,Open Developer Tool > Test on Different Screens,Reponsiveness for all Screens,Reponsiveness for all Screens,Passed,High,,No Issue Found
+TC003,Api Response,Open ThunderClient > Check Api Response,Get API Reponse Correctly,Get API Reponse Correctly,Passed,High,,No Issue Found
+TC004,Performance Testing,Use LightHouse > Check Performace,Get 100% Result,Get Performace 51% Accessibility 81 % ,Passed,Medium,,No Issue Found
+TC005,Security Testing,Open Developer Tool > Check Security,Get HTTPS secure ,Get HTTPS has non secure origin,Failed,Low,,Issue Found
+TC006,User Acceptance Testing,"Open Product Page > Verify Add to Cart, Checking Out, Browsing Produtct",Every Thing Runs Perfectly,Every Thing Runs Perfectly,Passed,High,,No Issue Found

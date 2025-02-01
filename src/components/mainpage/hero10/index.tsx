@@ -68,9 +68,9 @@ const Hero10 = () => {
     ))}
   </div>
 </section>
-<div>
+{/* <div>
   <Footer />
-</div>
+</div> */}
     </div>
 
   )
